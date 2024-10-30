@@ -1,0 +1,124 @@
+/* Основні стилі для форми */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 360px;
+}
+
+label {
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+
+input[type='number'],
+input[type='radio'],
+button {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Стани вводу */
+input[type='number']:focus {
+  border-color: #4e75ff;
+  outline: none;
+}
+
+/* Стилі для кнопки */
+button {
+  background-color: #2e2f42;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #4e75ff;
+}
+
+/* Сповіщення */
+.notification {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  position: relative;
+  width: 360px;
+  box-sizing: border-box;
+}
+
+/* Успішне повідомлення */
+.notification.success {
+  background: #59a10d;
+  border-bottom: 2px solid #b5ea7c;
+}
+
+/* Повідомлення з попередженням */
+.notification.caution {
+  background: #ffa000;
+  border-bottom: 2px solid #ffe0ac;
+}
+
+/* Повідомлення про помилку */
+.notification.error {
+  background: #ef4040;
+  border-bottom: 2px solid #ffbebe;
+}
+
+/* Текст повідомлення */
+.notification .text {
+  flex-grow: 1;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Іконки для сповіщень */
+.notification .icon {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification.success .icon {
+  color: #326101;
+}
+
+.notification.caution .icon {
+  color: #bb7b10;
+}
+
+.notification.error .icon {
+  color: #b51b1b;
+}
+
+/* Прогрес-лінія */
+.progress-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.success .progress-line {
+  background-color: #326101;
+}
+
+.caution .progress-line {
+  background-color: #bb7b10;
+}
+
+.error .progress-line {
+  background-color: #b51b1b;
+}
